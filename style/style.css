@@ -95,7 +95,7 @@ label {
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 10px;
-    border-color: #239017;
+    border: 1.5px solid #a8a8a8;
     border-radius: 7px;
     height: 15px;
     width: 200px;
