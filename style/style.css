@@ -108,7 +108,7 @@ nav {
 
 label {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.3vw;
+    font-size: 1vw;
 }
 
 .input {
@@ -142,6 +142,7 @@ label {
 }
 
 .btn1:hover {
+    cursor: pointer;
     width: 20.5vw;
     height: 10.5vh;
     font-size: 1.3vw;
@@ -163,11 +164,83 @@ label {
 }
 
 .btn2:hover {
+    cursor: pointer;
     width: 12.5vw;
     height: 7.5vh;
     font-size: 1.1vw;
     opacity: 0.9;
     transition: 0.5s;
+}
+
+.btn3 {
+    justify-self: center;
+    font-family: Poppins;
+    font-size: 0.8vw;
+    color: #FFFFFF;
+    background: #71BD39;
+    width: 12vw;
+    height: 5vh;
+    border-radius: 5px;
+    border-style: none;
+    transition: 0.5s;
+}
+
+.btn3:hover {
+    cursor: pointer;
+    width: 12.5vw;
+    height: 5.5vh;
+    font-size: 0.9vw;
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
+.btn4 {
+    justify-self: center;
+    font-family: Poppins;
+    font-size: 0.8vw;
+    color: #FFFFFF;
+    background: #D15757;
+    width: 12vw;
+    height: 5vh;
+    border-radius: 5px;
+    border-style: none;
+    margin: 15px;
+    transition: 0.5s;
+}
+
+.btn4:hover {
+    cursor: pointer;
+    width: 12.5vw;
+    height: 5.5vh;
+    font-size: 0.9vw;
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
+.btn5 {
+    justify-self: center;
+    font-family: Poppins;
+    font-size: 0.8vw;
+    color: #FFFFFF;
+    background: #71BD39;
+    width: 4vw;
+    height: 4vh;
+    border-radius: 5px;
+    border-style: none;
+    margin: 2px;
+    transition: 0.5s;
+}
+
+.btn5:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
+.acoes-adm {
+    position: absolute;
+    width: 50vw;
+    top: 48vh;
 }
 
 .index-img {
@@ -176,4 +249,68 @@ label {
     left: 50%;
     width: 40%;
     height: auto;
+}
+
+.painel-adm {
+    position: absolute;
+    justify-content: center;
+    color: #239017;
+    background: #FFFFFF;
+    top: 30%;
+    left: 20%;
+    height: 60vh;
+    width: 60vw;
+    box-shadow: 0vh 1vw 5vh rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+}
+
+.lista-solicitacoes h3 {
+    font-family: Poppins;
+    font-size: 1vw;
+    position: absolute;
+    color: #239017;
+    top: 2vh;
+    left: 5%;
+}
+
+.solicitacoes-pendentes {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1vw;
+    position: absolute;
+    color: #239017;
+    top: 10vh;
+    left: 5%;
+}
+
+table, th, td {
+    border-collapse: collapse;
+}
+
+th, td {
+    padding-right: 15px;
+    text-align: left;
+}
+
+.info {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    color: #239017;
+    top: 2vh;
+    left: 55%;
+    width: 24.8vw;
+    text-align: justify;
+}
+
+.info h3 {
+    font-family: Poppins;
+    font-size: 1vw;
+}
+
+.info-aluno b {
+    font-family: Poppins;
+    font-size: 0.8vw;
+}
+
+.span-len {
+    font-size: 0.85vw;
 }
