@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css"  href="./style/style.css" />
+    
+    <title>Painel de Controle | Sistema de Controle de Evasão Acadêmica</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <br />
+            <center><img class="logo-img" src="./img/Marca-Horizontal-Smbolo-Tipografia-001.png" /></center>
+        </div>
+
+        <div class="navbar-container">
+            <nav>
+                <ul class="nav-list">
+                    <li>
+                        <a href="/">Início</a>
+                    </li>
+                    <li>
+                        <a href="/#sobre">Sobre o sistema</a>
+                    </li>
+                    <li>
+                        <a href="/#solicitar-evasao">Solicitar evasão</a>
+                    </li>
+                    <li>
+                        <a href="./estatisticas.html">Estatísticas</a>
+                    </li>
+                    <div class="navbar-spacing"></div>
+                    <li>
+                        <a href="/">Sair</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="painel-adm">
+        
+        <div class="lista-solicitacoes">
+            <h3>Lista de solicitações</h3>
+
+            <div class="solicitacoes-pendentes">
+                <table>
+                    <tr>
+                      <th>Nome</th>
+                      <th>Data</th>
+                      <th>Ação</th>
+                    </tr>
+                    <tr>
+                      <td>João da Silva</td>
+                      <td>22/03/2023</td>
+                      <td><a href="/" target="_blank"><button class="btn5">Abrir</button></a></td>
+                    </tr>
+                    <tr>
+                      <td>Ana Carolina Sousa</td>
+                      <td>20/03/2023</td>
+                      <td><a href="/" target="_blank"><button class="btn5">Abrir</button></a></td>
+                    </tr>
+                    <tr>
+                      <td>Pedro Henrique Oliveira</td>
+                      <td>18/03/2023</td>
+                      <td><a href="/" target="_blank"><button class="btn5">Abrir</button></a></td>
+                    </tr>
+                    <tr>
+                      <td>Luana da Silva Santos</td>
+                      <td>15/03/2023</td>
+                      <td><a href="/" target="_blank"><button class="btn5">Abrir</button></a></td>
+                    </tr>
+                    <tr>
+                      <td>Rafaela Souza Costa</td>
+                      <td>10/03/2023</td>
+                      <td><a href="/" target="_blank"><button class="btn5">Abrir</button></a></td>
+                    </tr>
+                    <tr>
+                      <td>Thiago Santos Oliveira</td>
+                      <td>05/03/2023</td>
+                      <td><a href="/" target="_blank"><button class="btn5">Abrir</button></a></td>
+                    </tr>
+                  </table>
+            </div>
+        </div>
+
+        <div class="info">
+            <h3>Informações da solicitação</h3>
+            <div class="info-aluno">
+                <b>Nome: </b>
+                <span class="span-len" id="nome-aluno">João da Silva</span>
+                <br />
+                <b>Nome social: </b>
+                <span class="span-len" id="nome-social"></span>
+                <br />
+                <b>Nº da matrícula: </b>
+                <span class="span-len" id="matricula">123456789012</span>
+                <br />
+                <br />
+                <b>Curso: </b>
+                <span class="span-len"id="curso">Engenharia Mecânica</span>
+                <br />
+                <b>Unidade/Campus: </b>
+                <span class="span-len" id="campus">2</span>
+                <br />
+                <br />
+                <b>E-mail: </b>
+                <span class="span-len" id="email">joao.silva@unifesspa.edu.br</span>
+                <br />
+                <b>Telefone: </b>
+                <span class="span-len" id="telefone">(31) 99999-9999</span>
+                <br />
+                <br />
+                <b>Motivo da evasão: </b>
+                <br />
+                <span class="span-len" id="motivo">Questões pessoais e familiares que exigem minha dedicação e tempo integral no momento, impossibilitando a continuidade dos estudos no momento.</span>
+            </div>
+
+            <div class="acoes-adm">
+                <button class="btn3">Confirmar evasão</button>
+                <button class="btn4">Informar inconsistências</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
