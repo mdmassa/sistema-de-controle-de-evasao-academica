@@ -328,36 +328,3 @@ th, td {
     width: 100vw;
     z-index: -2;
 }
-
-.sobre {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #239017;
-}
-
-.sobre h1 {
-    font-family: Poppins;
-    font-size: 2.7vw;
-}
-
-.fig-1 {
-    position: absolute;
-    top: 143vh;
-    left: 20vw;
-    width: 20vw;
-    justify-content: center;
-}
-
-.fig-2 {
-    position: absolute;
-    top: 143vh;
-    left: 60vw;
-    width: 20vw;
-    justify-content: center;
-}
-
-.back-top-1 {
-    position: absolute;
-    top: 200vh;
-    left: 85vw;
-    width: 20vw;
-}
