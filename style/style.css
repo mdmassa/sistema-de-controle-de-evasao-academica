@@ -268,6 +268,19 @@ label {
     border-radius: 20px;
 }
 
+.form-area {
+    position: absolute;
+    justify-content: center;
+    color: #239017;
+    background: #FFFFFF;
+    top: 24%;
+    left: 5%;
+    height: 73vh;
+    width: 90vw;
+    box-shadow: 0vh 1vw 5vh rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+}
+
 .lista-solicitacoes h3 {
     font-family: Poppins;
     font-size: 1vw;
@@ -327,4 +340,148 @@ th, td {
     height: 80vh;
     width: 100vw;
     z-index: -2;
+}
+
+.info-solicitacao {
+    position: absolute;
+    font-size: 1vw;
+    color: #239017;
+    top: 2vh;
+    left: 5%;
+}
+
+.info-solicitacao h2 {
+    font-family: Poppins;
+    font-size: 1vw;
+}
+
+.input-nome {
+    padding: 1.2vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.7vw;
+    margin-top: 1.2vh;
+    border: 0.03vw solid #a8a8a8;
+    border-radius: 5px;
+    height: 1vh;
+    width: 32.1vw;
+}
+
+.input-curso {
+    padding: 1.2vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.7vw;
+    margin-top: 1.2vh;
+    border: 0.03vw solid #a8a8a8;
+    border-radius: 5px;
+    height: 4vh;
+    width: 16vw;
+}
+
+.input-unid {
+    padding: 1.2vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.7vw;
+    margin-top: 1.2vh;
+    border: 0.03vw solid #a8a8a8;
+    border-radius: 5px;
+    height: 4vh;
+    width: 16vw;
+}
+
+.input-matricula {
+    padding: 1.2vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.7vw;
+    margin-top: 1.2vh;
+    border: 0.03vw solid #a8a8a8;
+    border-radius: 5px;
+    height: 1vh;
+    width: 15vw;
+}
+
+.input-cpf {
+    padding: 1.2vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.7vw;
+    margin-top: 1.2vh;
+    border: 0.03vw solid #a8a8a8;
+    border-radius: 5px;
+    height: 1vh;
+    width: 14.5vw;
+}
+
+.input-email {
+    padding: 1.2vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.7vw;
+    margin-top: 1.2vh;
+    border: 0.03vw solid #a8a8a8;
+    border-radius: 5px;
+    height: 1vh;
+    width: 15vw;
+}
+
+.input-tel {
+    padding: 1.2vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.7vw;
+    margin-top: 1.2vh;
+    border: 0.03vw solid #a8a8a8;
+    border-radius: 5px;
+    height: 1vh;
+    width: 14.5vw;
+}
+
+.input-idade {
+    padding: 1.2vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.7vw;
+    margin-top: 1.2vh;
+    border: 0.03vw solid #a8a8a8;
+    border-radius: 5px;
+    height: 1vh;
+    width: 15vw;
+}
+
+.input-sexo {
+    padding: 1.2vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.7vw;
+    margin-top: 1.2vh;
+    border: 0.03vw solid #a8a8a8;
+    border-radius: 5px;
+    height: 4vh;
+    width: 16vw;
+}
+
+.justif-evasao {
+    position: absolute;
+    font-size: 1vw;
+    color: #239017;
+    top: 2vh;
+    left: 55%;
+    width: 24.8vw;
+    text-align: justify;
+}
+
+.justif-evasao h2 {
+    font-family: Poppins;
+    font-size: 1vw;
+    position: absolute;
+    color: #239017;
+    top: 2vh;
+}
+
+.justif-evasao p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.7vw;
+    resize: none;
+    height: 20vh;
+    width: 37vw;
+    border-radius: 7px;
+    padding: 1.2vh;
 }
