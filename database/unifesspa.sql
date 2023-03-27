@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Tempo de geração: 25-Mar-2023 às 19:00
+-- Tempo de geração: 27-Mar-2023 às 04:43
 -- Versão do servidor: 10.4.27-MariaDB
 -- versão do PHP: 8.2.0
 
@@ -38,7 +38,8 @@ CREATE TABLE `Admins` (
 --
 
 INSERT INTO `Admins` (`id`, `login`, `senha`) VALUES
-(1, 'adm', '1234');
+(1, 'mariaeduarda', '1234'),
+(2, 'elton', 'calvo');
 
 -- --------------------------------------------------------
 
@@ -87,7 +88,8 @@ CREATE TABLE `SolicitacoesEvasao` (
   `telefone` varchar(11) NOT NULL,
   `idade` bigint(2) NOT NULL,
   `sexo` varchar(1) NOT NULL,
-  `motivo_evasao` varchar(500) NOT NULL,
+  `motivo_evasao` varchar(500) DEFAULT NULL,
+  `outros_motivos` varchar(500) DEFAULT NULL,
   `data_evasao` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -95,8 +97,8 @@ CREATE TABLE `SolicitacoesEvasao` (
 -- Extraindo dados da tabela `SolicitacoesEvasao`
 --
 
-INSERT INTO `SolicitacoesEvasao` (`nome`, `nome_social`, `curso`, `unidade`, `matricula`, `cpf`, `email`, `telefone`, `idade`, `sexo`, `motivo_evasao`, `data_evasao`) VALUES
-('José Silva', '', 'Psicologia', '1', '202100030310', '33344455566', 'jose.silva@gmail.com', '3344556677', 22, 'M', 'Muitas despesas para se manter na universidade', '2023-03-25');
+INSERT INTO `SolicitacoesEvasao` (`nome`, `nome_social`, `curso`, `unidade`, `matricula`, `cpf`, `email`, `telefone`, `idade`, `sexo`, `motivo_evasao`, `outros_motivos`, `data_evasao`) VALUES
+('José Silva', '', 'Psicologia', '1', '202100030310', '33344455566', 'jose.silva@gmail.com', '3344556677', 22, 'M', 'Muitas despesas para se manter na universidade', NULL, '2023-03-25');
 
 --
 -- Índices para tabelas despejadas
@@ -122,7 +124,7 @@ ALTER TABLE `Alunos`
 -- AUTO_INCREMENT de tabela `Admins`
 --
 ALTER TABLE `Admins`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
