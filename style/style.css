@@ -191,9 +191,6 @@ label {
 
 .btn3:hover {
     cursor: pointer;
-    width: 12.5vw;
-    height: 5.5vh;
-    font-size: 0.9vw;
     opacity: 0.8;
     transition: 0.5s;
 }
@@ -208,16 +205,6 @@ label {
     height: 5vh;
     border-radius: 5px;
     border-style: none;
-    margin: 15px;
-    transition: 0.5s;
-}
-
-.btn4:hover {
-    cursor: pointer;
-    width: 12.5vw;
-    height: 5.5vh;
-    font-size: 0.9vw;
-    opacity: 0.8;
     transition: 0.5s;
 }
 
@@ -228,10 +215,9 @@ label {
     color: #FFFFFF;
     background: #71BD39;
     width: 4vw;
-    height: 4vh;
+    height: 5vh;
     border-radius: 5px;
     border-style: none;
-    margin: 2px;
     transition: 0.5s;
 }
 
@@ -264,7 +250,7 @@ label {
     left: 20%;
     height: 60vh;
     width: 60vw;
-    box-shadow: 0vh 1vw 5vh rgba(0, 0, 0, 0.15);
+    /*box-shadow: 0vh 1vw 5vh rgba(0, 0, 0, 0.15);*/
     border-radius: 20px;
 }
 
@@ -290,16 +276,28 @@ label {
     left: 5%;
 }
 
+.acoes {
+    font-family: Poppins;
+    font-size: 1vw;
+    position: absolute;
+    color: #239017;
+    top: 8vh;
+    left: 5%;
+}
+
 .solicitacoes-pendentes {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1vw;
     position: absolute;
     color: #239017;
-    top: 10vh;
+    top: 15vh;
     left: 5%;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 table, th, td {
+    color: #239017;
     border-collapse: collapse;
 }
 
@@ -312,13 +310,13 @@ th, td {
     font-family: Arial, Helvetica, sans-serif;
     position: absolute;
     color: #239017;
-    top: 2vh;
-    left: 55%;
+    top: 1vh;
+    left: 30vw;
     width: 24.8vw;
     text-align: justify;
 }
 
-.info h3 {
+.info b {
     font-family: Poppins;
     font-size: 1vw;
 }
