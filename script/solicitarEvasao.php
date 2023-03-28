@@ -30,9 +30,11 @@
     $rs = mysqli_query($con, $sql);
     
     if($rs) {
-        echo "Solicitacao enviada!";
+        echo "<script language='javascript' type='text/javascript'>
+        alert('Solicitação enviada com sucesso!');window.location.
+        href='http://localhost/sicea/sistema-de-controle-de-evasao-academica/solicitar-evasao.html';</script>";
     }
-  
+
     mysqli_close($con);
 
 ?>
