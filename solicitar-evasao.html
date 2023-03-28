@@ -55,7 +55,7 @@
     </header>
 
     <div class="form-area">
-        <form action="http://localhost/sicea/solicitarEvasao.php" method="POST">
+        <form action="http://localhost/sicea/sistema-de-controle-de-evasao-academica/script/solicitarEvasao.php" method="POST">
             <div class="info-solicitacao">
                 <br />
                 <h2>Informações básicas do aluno</h2>
@@ -70,29 +70,29 @@
                 <br />
                 <label for="cursoaluno">Curso: *</label>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ<label for="unid">Unidade/Campus: *</label>
                 <br />
-                <select name="cursoaluno" class="input-curso" id="cursoaluno">
+                <select name="cursoaluno" class="input-curso" id="cursoaluno" required>
                     <option disabled selected>Selecione o seu curso...</option>
-                    <option value="30">Administração</option>
-                    <option value="22">Agronomia</option>
-                    <option value="27">Artes Visuais</option>
-                    <option value="24">Ciẽncias Biológicas</option>
-                    <option value="31">Ciências Contábeis</option>
-                    <option value="08">Direito</option>
-                    <option value="13">Engenharia Civil</option>
-                    <option value="14">Engenharia da Computação</option>
-                    <option value="17">Engenharia Elétrica</option>
-                    <option value="18">Engenharia Mecânica</option>
-                    <option value="19">Engenharia Química</option>
-                    <option value="20">Geologia</option>
-                    <option value="28">Letras - Inglês</option>
-                    <option value="29">Letras - Português</option>
-                    <option value="11">Matemática</option>
-                    <option value="25">Psicologia</option>
-                    <option value="12">Química</option>
-                    <option value="21">Sistemas de Informação</option>
+                    <option value="Administração">Administração</option>
+                    <option value="Agronomia">Agronomia</option>
+                    <option value="Artes Visuais">Artes Visuais</option>
+                    <option value="Ciẽncias Biológicas">Ciẽncias Biológicas</option>
+                    <option value="Ciências Contábeis">Ciências Contábeis</option>
+                    <option value="Direito">Direito</option>
+                    <option value="Engenharia Civil">Engenharia Civil</option>
+                    <option value="Engenharia da Computação">Engenharia da Computação</option>
+                    <option value="Engenharia Elétrica">Engenharia Elétrica</option>
+                    <option value="Engenharia Mecânica">Engenharia Mecânica</option>
+                    <option value="Engenharia Química">Engenharia Química</option>
+                    <option value="Geologia">Geologia</option>
+                    <option value="Letras - Inglês">Letras - Inglês</option>
+                    <option value="Letras - Português">Letras - Português</option>
+                    <option value="Matemática">Matemática</option>
+                    <option value="Psicologia">Psicologia</option>
+                    <option value="Química">Química</option>
+                    <option value="Sistemas de Informação">Sistemas de Informação</option>
                 </select>
                 ㅤ
-                <select name="unid" class="input-unid">
+                <select name="unid" class="input-unid" required>
                     <option disabled selected>Selecione a sua unidade...</option>
                     <option value="1">Campus 1</option>
                     <option value="2">Campus 2</option>
@@ -115,7 +115,7 @@
                 <label for="idade">Idade: *</label>ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ<label for="sexo">Sexo: *</label><br />
                 <input type="text"  name="idade" placeholder="Digite sua idade..." id="idade" class="input-idade" required/>
                 ㅤ
-                <select name="sexo" class="input-sexo" >
+                <select name="sexo" class="input-sexo" required>
                     <option disabled selected>Selecione seu sexo...</option>
                     <option value="F">Feminino</option>
                     <option value="M">Masculino</option>
@@ -128,14 +128,14 @@
                 <br />
                 <br />
                 <p>
-                <input type="radio" name="justif-evasao" value="01" /> Não me identifiquei com o curso<br />
-                <input type="radio" name="justif-evasao" value="02" /> Precisei ir trabalhar<br />
-                <input type="radio" name="justif-evasao" value="03" /> Problemas de saúde (discente/familiares)<br />
-                <input type="radio" name="justif-evasao" value="04" /> Deficiência da educação básica<br />
-                <input type="radio" name="justif-evasao" value="05" /> Mudança de endereço<br />
-                <input type="radio" name="justif-evasao" value="06" /> Reprovações sucessivas<br />
-                <input type="radio" name="justif-evasao" value="07" /> Casamento não planejados/nascimento de filhos<br />
-                <input type="radio" name="justif-evasao" value="08" /> Entrei na faculdade por imposição<br />
+                <input type="radio" name="justif-evasao" value="Não me identifiquei com o curso." /> Não me identifiquei com o curso<br />
+                <input type="radio" name="justif-evasao" value="Precisei ir trabalhar." /> Precisei ir trabalhar<br />
+                <input type="radio" name="justif-evasao" value="Problemas de saúde (discente/familiares)." /> Problemas de saúde (discente/familiares)<br />
+                <input type="radio" name="justif-evasao" value="Deficiência da educação básica." /> Deficiência da educação básica<br />
+                <input type="radio" name="justif-evasao" value="Mudança de endereço." /> Mudança de endereço<br />
+                <input type="radio" name="justif-evasao" value="Reprovações sucessivas." /> Reprovações sucessivas<br />
+                <input type="radio" name="justif-evasao" value="Casamento não planejados/nascimento de filhos." /> Casamento não planejados/nascimento de filhos<br />
+                <input type="radio" name="justif-evasao" value="Entrei na faculdade por imposição." /> Entrei na faculdade por imposição<br />
                 <br />
                 Outros motivos:<br /><br />
                 <textarea name="outros-motivos" maxlength="500" cols="30" rows="3" id="justif-evasao" class="input-outros" ></textarea>
