@@ -1,18 +1,9 @@
 <?php
+    include 'conexao.php';
+
     if(isset($_POST['entrar'])) {
         $login = $_POST['login'];
         $senha = $_POST['password'];
-    }
-
-    $host = "localhost";
-    $dbname = "unifesspa";
-    $username = "root";
-    $password = "";
-
-    $con = mysqli_connect($host, $username, $password, $dbname);
-
-    if (!$con) {
-        die("Connection failed!" . mysqli_connect_error());
     }
 
     $sql = "SELECT * FROM Admins WHERE login = '$login' AND senha = '$senha'";

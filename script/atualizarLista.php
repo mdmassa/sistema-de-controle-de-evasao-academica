@@ -29,7 +29,7 @@
                         <a href="http://localhost:5500/solicitar-evasao.html">Solicitar evasão</a>
                     </li>
                     <li>
-                        <a href="http://localhost:5500/estatisticas.html">Estatísticas</a>
+                        <a href="http://localhost/sicea/sistema-de-controle-de-evasao-academica/script/gerarGrafico.php">Estatísticas</a>
                     </li>
                     <div class="navbar-spacing"></div>
                     <li>
@@ -53,16 +53,7 @@
 
             <div class="solicitacoes-pendentes" id="solicitacoes-pendentes">
                 <?php
-                    $host = "localhost";
-                    $dbname = "unifesspa";
-                    $username = "root";
-                    $password = "";
-
-                    $con = mysqli_connect($host, $username, $password, $dbname);
-
-                    if (!$con) {
-                        die("Connection failed!" . mysqli_connect_error());
-                    }
+                    include 'conexao.php';
 
                     $sql = "SELECT * FROM SolicitacoesEvasao";
 
