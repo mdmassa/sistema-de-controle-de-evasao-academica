@@ -483,3 +483,9 @@ textarea {
     border-radius: 7px;
     padding: 1.2vh;
 }
+
+.graficos {
+    position: absolute;
+    top: 50vh;
+    left: 18vw;
+}
