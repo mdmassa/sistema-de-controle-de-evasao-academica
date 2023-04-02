@@ -208,6 +208,12 @@ label {
     transition: 0.5s;
 }
 
+.btn4:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
 .btn5 {
     justify-self: center;
     font-family: Poppins;
@@ -222,6 +228,25 @@ label {
 }
 
 .btn5:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
+.btn6 {
+    justify-self: center;
+    font-family: Poppins;
+    font-size: 0.8vw;
+    color: #FFFFFF;
+    background: #71BD39;
+    width: 8vw;
+    height: 3vh;
+    border-radius: 5px;
+    border-style: none;
+    transition: 0.5s;
+}
+
+.btn6:hover {
     cursor: pointer;
     opacity: 0.8;
     transition: 0.5s;
@@ -252,6 +277,10 @@ label {
     width: 60vw;
     /*box-shadow: 0vh 1vw 5vh rgba(0, 0, 0, 0.15);*/
     border-radius: 20px;
+}
+
+.painel-adm h1 {
+    font-family: Poppins;
 }
 
 .form-area {
@@ -290,6 +319,7 @@ label {
     font-size: 1vw;
     position: absolute;
     color: #239017;
+    width: 80vw;
     top: 15vh;
     left: 5%;
     overflow-x: hidden;
@@ -486,6 +516,24 @@ textarea {
 
 .graficos {
     position: absolute;
+    width: 100vw;
     top: 50vh;
+}
+
+.gr_curso {
+    position: absolute;
+    top: 10vh;
     left: 18vw;
+}
+
+.columns {
+    position: absolute;
+    top: 80vh;
+    left: 8vw;
+}
+
+.gr_idade {
+    position: absolute;
+    top: 150vh;
+    left: 10vw;
 }
