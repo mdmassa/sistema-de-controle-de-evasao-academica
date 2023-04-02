@@ -39,7 +39,6 @@ CREATE TABLE `Admins` (
 
 INSERT INTO `Admins` (`id`, `login`, `senha`) VALUES
 (1, 'mariaeduarda', '1234'),
-(2, 'elton', 'calvo');
 
 -- --------------------------------------------------------
 
