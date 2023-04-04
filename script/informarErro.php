@@ -46,19 +46,15 @@
     ?>
 
             <br />
-            <div class="painel-adm">
+            <div class="painel-informa">
                 <h1>Informar inconsistências na solicitação</h1>
                 <label>Matrícula do aluno: <?php echo $matricula ?></label><br /><br />
-                <form action="http://localhost/sicea/sistema-de-controle-de-evasao-academica/script/enviarEmail.php" method="POST">
+                <form action="http://localhost/sicea/sistema-de-controle-de-evasao-academica/script/actions.php" method="POST">
                     <label for="titulo">Título:</label><br />
-                    <input name="titulo" id="titulo" class="input-nome" placeholder="Titulo do e-mail" /><br /><br />
-                    <label for="nome">Nome:</label><br />
-                    <input name="nome" id="titulo" class="input-nome" placeholder="Nome do destinatario" /><br /><br />
-                    <label for="email">E-mail:</label><br />
-                    <input name="email" id="titulo" class="input-nome" placeholder="E-mail do destinatario" /><br /><br />
+                    <input name="titulo" id="titulo" class="input-informa" placeholder="Titulo do e-mail" required/>
                     <input type="hidden" name="matricula" value="<?php echo $matricula;?>" />
                     <label for="mensagem">Mensagem:</label><br /><br />
-                    <textarea name="mensagem" maxlength="500" cols="30" rows="3" id="mensagem" class="input-outros" placeholder="Informe as inconsistências e peça uma nova solicitação de evasão."></textarea><br /><br />
+                    <textarea name="mensagem" maxlength="500" cols="30" rows="3" id="mensagem" class="input-outros" placeholder="Informe as inconsistências e peça uma nova solicitação de evasão." required></textarea><br /><br />
                     <button class="btn3" type="submit" name="enviarErros">Enviar</button>
                 </form>
             </div>

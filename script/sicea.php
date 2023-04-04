@@ -85,9 +85,7 @@ function solicitarEvasao($nome, $nome_social, $curso, $unidade, $matricula, $cpf
     $rs = mysqli_query($con, $sql);
     
     if($rs) {
-        echo "<script language='javascript' type='text/javascript'>
-        alert('Solicitação enviada com sucesso!');window.location.
-        href='http://localhost/sicea/sistema-de-controle-de-evasao-academica/solicitar-evasao.php';</script>";
+        header("Location: http://localhost/sicea/sistema-de-controle-de-evasao-academica/solicitar-evasao.php?msg=Solicitação enviada com sucesso!");
     }
 
     mysqli_close($con);
@@ -193,42 +191,62 @@ function confirmarEvasao($matricula){
     $sql4 = "UPDATE Alunos SET status_matricula=0 WHERE matricula='$matricula'";
     $rs4 = mysqli_query($con, $sql4);
 
-
-    if($rs4) {
-        echo "<script language='javascript' type='text/javascript'>
-        alert('Solicitação confirmada com sucesso!');window.location.
-        href='http://localhost/sicea/sistema-de-controle-de-evasao-academica/script/dashboard.php';</script>";
-    }
-
-    mysqli_close($con);
-}
-
-
-function informarErro($matricula, $titulo, $nome, $email, $mensagem){
-    include 'conexao.php';
-
-    $sql = "SELECT * FROM SolicitacoesEvasao WHERE matricula = '$matricula'";
-    $rs = mysqli_query($con, $sql);
-
-    /*if (mysqli_num_rows($rs) > 0) {
-        $row = mysqli_fetch_assoc($rs);
-        $nome = $row['nome'];
-        $email = $row['email'];
-    } else {
-        echo "Nenhum resultado encontrado";
-    }*/
-
-
-
     require '../lib/sendgrid-php/sendgrid-php.php';
 
     $sendgrid = new \SendGrid('');
+
+    $titulo = "UNIFESSPA - Solicitação de evasão confirmada";
+
+    $mensagem = "Caro, aluno\n Sua solicitação de evasão foi confirmada pela secretaria.\n\nAtt: Secretaria da UNIFESSPA. ";
 
     $mail = new \SendGrid\Mail\Mail(); 
     $mail->setFrom("mariaeduardamassa@unifesspa.edu.br", "Maria Eduarda Massa");
     $mail->setSubject($titulo);
     $mail->addTo($email, $nome);
     $mail->addContent("text/plain", $mensagem);
+    
+    try {
+        $response = $sendgrid->send($mail);
+        echo "<script language='javascript' type='text/javascript'>
+        alert('Solicitação confirmada com sucesso!');window.location.
+        href='http://localhost/sicea/sistema-de-controle-de-evasao-academica/script/dashboard.php';</script>";
+
+    } catch (Exception $e) {
+        echo "Erro ao confirmar solicitação: " . $e->getMessage();
+    }
+
+    mysqli_close($con);
+}
+
+
+function informarErro($matricula, $titulo, $mensagem){
+    include 'conexao.php';
+
+    $sql = "SELECT * FROM SolicitacoesEvasao WHERE matricula = '$matricula'";
+    $rs = mysqli_query($con, $sql);
+
+    if (mysqli_num_rows($rs) > 0) {
+        $row = mysqli_fetch_assoc($rs);
+        $nome = $row['nome'];
+        $email = $row['email'];
+    } else {
+        echo "Nenhum resultado encontrado";
+    }
+
+
+
+    require '../lib/sendgrid-php/sendgrid-php.php';
+
+    $sendgrid = new \SendGrid('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');
+
+    $mail = new \SendGrid\Mail\Mail(); 
+    $mail->setFrom("mariaeduardamassa@unifesspa.edu.br", "Maria Eduarda Massa");
+    $mail->setSubject($titulo);
+    $mail->addTo($email, $nome);
+    $mail->addContent("text/plain", $mensagem);
+
+    $sql2 = "DELETE FROM SolicitacoesEvasao WHERE matricula = '$matricula'";
+    $rs2 = mysqli_query($con, $sql2);
 
     try {
         $response = $sendgrid->send($mail);

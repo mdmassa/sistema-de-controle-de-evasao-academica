@@ -52,14 +52,7 @@
             </div>
 
             <div class="solicitacoes-pendentes" id="solicitacoes-pendentes">
-              <?php
-                include 'conexao.php';
-
-                $sql = "SELECT * FROM SolicitacoesEvasao";
-                $rs = mysqli_query($con, $sql);
-
-                if(isset($_POST['atualizar'])) {?>
-                    <table>
+                     <table>
                         <thead>
                             <tr>
                             <th>Matricula</th>
@@ -71,33 +64,19 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php while ($row = mysqli_fetch_assoc($rs)) { ?>
                             <tr>
-                                <td><?php echo $row['matricula']; ?></td>
-                                <td><?php echo $row['nome']; ?></td>
-                                <td><?php echo $row['data_evasao']; ?></td>
-                                <td>
-                                    <form action="http://localhost/sicea/sistema-de-controle-de-evasao-academica/script/abrirSolicitacao.php" method="POST">
-                                            <input type="hidden" name="matricula" value="<?php echo $row['matricula'];?>" />
-                                            <button class="btn5" type="submit" name="gerarPDF">Abrir</button>
-                                    </form>
-
-                                </td>
-                                <td>
-                                    <form action="http://localhost/sicea/sistema-de-controle-de-evasao-academica/script/confirmarEvasao.php" method="POST">
-                                            <input type="hidden" name="matricula" value="<?php echo $row['matricula'];?>" />
-                                            <button class="btn3" type="submit" name="confirmar"> Confirmar evasão</button>
-                                    </form>
-                                </td>
-                                <td>
-                                    <form action="http://localhost/sicea/sistema-de-controle-de-evasao-academica/script/informarErro.php" method="POST">
-                                        <input type="hidden" name="matricula" value="<?php echo $row['matricula'];?>" /> 
-                                        <button class="btn4" type="submit" name="informarErro">Informar inconsistências</button>
-                                    </form>
-                                </td>
+                                <td><br /><br />Clique em atualizar para exibir solicitações pendentes.</td>
                             </tr>
-                            <?php } ?>
                         </tbody>
                     </table>
-                    <?php } ?>
             </div>
+        </body>
+</html>            
+
+<?php if(isset($_GET['msg_confirmacao'])) { ?>
+        <script>
+            window.onload = function() {
+                alert("<?php echo $_GET['msg_confirmacao']; ?>");
+            }
+        </script>
+    <?php } ?>

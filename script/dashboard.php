@@ -58,7 +58,28 @@
                 $sql = "SELECT * FROM SolicitacoesEvasao";
                 $rs = mysqli_query($con, $sql);
 
-                if(isset($_POST['atualizar'])) {?>
+                if(isset($_POST['atualizar'])) {
+                    
+                    if(mysqli_num_rows($rs) <= 0){ ?>
+                    <table>
+                        <thead>
+                            <tr>
+                            <th>Matricula</th>
+                            <th>Nome</th>
+                            <th>Data</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><br /><br />Não há solicitações pendentes.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                   <?php } else {
+                    ?>
                     <table>
                         <thead>
                             <tr>
@@ -84,7 +105,7 @@
 
                                 </td>
                                 <td>
-                                    <form action="http://localhost/sicea/sistema-de-controle-de-evasao-academica/script/confirmarEvasao.php" method="POST">
+                                    <form action="http://localhost/sicea/sistema-de-controle-de-evasao-academica/script/actions.php" method="POST">
                                             <input type="hidden" name="matricula" value="<?php echo $row['matricula'];?>" />
                                             <button class="btn3" type="submit" name="confirmar"> Confirmar evasão</button>
                                     </form>
@@ -99,5 +120,6 @@
                             <?php } ?>
                         </tbody>
                     </table>
-                    <?php } ?>
+                    <?php }
+                } ?>
             </div>
