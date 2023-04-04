@@ -99,11 +99,11 @@ nav {
     transition: 0.5s;
 }
 
-.login-box:hover {
+/*.login-box:hover {
     top: 33vh;
     box-shadow: 0vh 1vw 5vh rgba(0, 0, 0, 0.2);
     transition: 0.5s;
-}
+}*/
 
 .login-box h4 {
     font-family: Poppins;
@@ -280,6 +280,23 @@ label {
 }
 
 .painel-adm h1 {
+    font-family: Poppins;
+}
+
+.painel-informa {
+    position: absolute;
+    justify-content: center;
+    color: #239017;
+    background: #FFFFFF;
+    top: 25%;
+    left: 20%;
+    height: 60vh;
+    width: 60vw;
+    /*box-shadow: 0vh 1vw 5vh rgba(0, 0, 0, 0.15);*/
+    border-radius: 20px;
+}
+
+.painel-informa h1 {
     font-family: Poppins;
 }
 
@@ -482,6 +499,17 @@ th, td {
     width: 16vw;
 }
 
+.input-informa {
+    padding: 1.2vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.7vw;
+    margin-top: 1.2vh;
+    border: 0.03vw solid #a8a8a8;
+    border-radius: 5px;
+    height: 3vh;
+    width: 37vw;
+}
+
 .justif-evasao {
     position: absolute;
     font-size: 1vw;
@@ -510,6 +538,7 @@ textarea {
     resize: none;
     height: 20vh;
     width: 37vw;
+    border: 0.03vw solid #a8a8a8;
     border-radius: 7px;
     padding: 1.2vh;
 }
@@ -528,12 +557,12 @@ textarea {
 
 .columns {
     position: absolute;
-    top: 80vh;
-    left: 8vw;
+    top: 55vh;
+/*    left: 2vw;*/
 }
 
 .gr_idade {
     position: absolute;
-    top: 150vh;
-    left: 10vw;
+    top: 100vh;
+    left: 18vw;
 }

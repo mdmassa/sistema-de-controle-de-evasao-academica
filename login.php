@@ -46,7 +46,7 @@
         <center>
             <h4>Login administrativo</h4>
         </center>
-            <form action="http://localhost/sicea/sistema-de-controle-de-evasao-academica/script/realizarLogin.php" class="form-login" method="POST">
+            <form action="http://localhost/sicea/sistema-de-controle-de-evasao-academica/script/actions.php" class="form-login" method="POST">
                 <label>Login: *</label>
                 <br />
                 <input type="text" name="login" placeholder="Insira seu login..." id="login" class="input" required>

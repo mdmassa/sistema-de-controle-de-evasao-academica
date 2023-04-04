@@ -135,7 +135,7 @@
         dadosSexo.addRows(<?php echo json_encode($dados_sexo); ?>);
 
         var opSexo = {'title':'Número de evasões por sexo',
-                       'width':500,
+                       'width':1000,
                        'height':500,
                        'is3D':true};
 

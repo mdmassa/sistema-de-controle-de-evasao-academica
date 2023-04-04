@@ -55,7 +55,7 @@
     </header>
 
     <div class="form-area">
-        <form action="http://localhost/sicea/sistema-de-controle-de-evasao-academica/script/solicitarEvasao.php" method="POST">
+        <form action="http://localhost/sicea/sistema-de-controle-de-evasao-academica/script/actions.php" method="POST">
             <div class="info-solicitacao">
                 <br />
                 <h2>Informações básicas do aluno</h2>
@@ -150,4 +150,13 @@
     </div>
 
 </body>
+
 </html>
+
+<?php if(isset($_GET['msg'])) { ?>
+        <script>
+            window.onload = function() {
+                alert("<?php echo $_GET['msg']; ?>");
+            }
+        </script>
+<?php } ?>
