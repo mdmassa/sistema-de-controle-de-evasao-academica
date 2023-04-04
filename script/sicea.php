@@ -200,7 +200,7 @@ function confirmarEvasao($matricula){
     $mensagem = "Caro, aluno\n Sua solicitação de evasão foi confirmada pela secretaria.\n\nAtt: Secretaria da UNIFESSPA. ";
 
     $mail = new \SendGrid\Mail\Mail(); 
-    $mail->setFrom("mariaeduardamassa@unifesspa.edu.br", "Maria Eduarda Massa");
+    $mail->setFrom("felipe@unifesspa.edu.br", "Luiz Felipe de Sousa Vasconcelos");
     $mail->setSubject($titulo);
     $mail->addTo($email, $nome);
     $mail->addContent("text/plain", $mensagem);
@@ -237,10 +237,10 @@ function informarErro($matricula, $titulo, $mensagem){
 
     require '../lib/sendgrid-php/sendgrid-php.php';
 
-    $sendgrid = new \SendGrid('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');
+    $sendgrid = new \SendGrid('');
 
     $mail = new \SendGrid\Mail\Mail(); 
-    $mail->setFrom("mariaeduardamassa@unifesspa.edu.br", "Maria Eduarda Massa");
+    $mail->setFrom("felipe@unifesspa.edu.br", "Luiz Felipe de Sousa Vasconcelos");
     $mail->setSubject($titulo);
     $mail->addTo($email, $nome);
     $mail->addContent("text/plain", $mensagem);
