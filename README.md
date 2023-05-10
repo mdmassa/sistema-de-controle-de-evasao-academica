@@ -16,7 +16,7 @@ A evasão acadêmica é um problema complexo que afeta várias instituições de
 ## Autores
 
 * [Bianca Lima](https://github.com/bi4lim4)
-* [Luiz Felipe de Souza Vasconcelos](https://github.com/felipexn)
+* [Luiz Felipe Souza Vasconcelos](https://github.com/felipexn)
 * [Maria Eduarda Massa](https://github.com/mdmassa)
 
 ## Contribuição
